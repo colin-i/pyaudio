@@ -1,3 +1,9 @@
+pyaudioo (1-2) jammy; urgency=medium
+
+  * with dev
+
+ -- bc <bc@bc-HP-Pavilion-x360-Convertible>  Thu, 07 Jul 2022 14:52:02 +0300
+
 pyaudioo (1-1) jammy; urgency=low
 
   * Initial release. Closes: #nnnn

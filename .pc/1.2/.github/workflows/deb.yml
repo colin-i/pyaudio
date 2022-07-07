@@ -4,7 +4,7 @@ on:
 
 jobs:
  dbuild:
-  runs-on: ubuntu-latest
+  runs-on: ubuntu-latest #launchpad "Uploading build" longer but is ok withou 22.04
   steps:
    - uses: actions/checkout@v3
      with:
