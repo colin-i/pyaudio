@@ -1,0 +1,10 @@
+
+mkdir -p ./usr/lib64/python3.10/site-packages && \
+sed "/^%doc.*copyright.*$/a %ghost \"/usr/lib64/python3.10/site-packages/PyAudio-0.2.12.egg-info\"\n" text > text2 && \
+sed "/^%doc.*copyright.*$/a %ghost \"/usr/lib64/python3.10/site-packages/pyaudio.py\"" text2 > text3 && \
+sed "/^%doc.*copyright.*$/a %ghost \"/usr/lib64/python3.10/site-packages/_portaudio.cpython-310-x86_64-linux-gnu.so\"" text3 > text2 && \
+printf "\n%%post\nln -s /usr/lib/python3/dist-packages/PyAudio-0.2.12.egg-info /usr/lib64/python3.10/site-packages/PyAudio-0.2.12.egg-info\n" >> text2 && \
+printf "ln -s /usr/lib/python3/dist-packages/pyaudio.py /usr/lib64/python3.10/site-packages/pyaudio.py \n" >> text2 && \
+printf "ln -s /usr/lib/python3/dist-packages/_portaudio.cpython-310-x86_64-linux-gnu.so /usr/lib64/python3.10/site-packages/_portaudio.cpython-310-x86_64-linux-gnu.so\n" >> text2 && \
+rm text3 && \
+sudo mv text2 text
