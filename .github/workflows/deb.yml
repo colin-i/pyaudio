@@ -24,8 +24,8 @@ jobs:
       fi
       origf=${name}-1.tar.gz
       if [ ! -e "${origf}" ]; then
-       mv "in/${origf}" "${origf}"
        origln=${name}_1.orig.tar.gz
+       wget https://ppa.launchpadcontent.net/colin-i/ppa/ubuntu/pool/main/p/${name}/${origln} -O ${origf}
        ln -s ${origf} ${origln}
       fi
       cd in
