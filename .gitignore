@@ -4,5 +4,3 @@ build/
 dist/
 docs/
 MANIFEST
-.pc/
-debian/patches/
